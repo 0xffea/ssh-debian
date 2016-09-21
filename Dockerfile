@@ -21,5 +21,5 @@ COPY files/authorized_keys /root/.ssh/authorized_keys
 RUN mkdir -p /var/run/sshd /var/log/supervisor && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-EXPOSE 22
+EXPOSE 2222
 ENTRYPOINT ["/root/entrypoint.sh"]
